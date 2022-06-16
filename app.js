@@ -1,24 +1,4 @@
-const apiUrl = 'https://api.teleport.org/api/'
-const apiSearch = 'countries/'
 const imageDefault = 'https://www.madeireiraestrela.com.br/images/joomlart/demo/default.jpg'
-
-function urlBuilder() {
-    const finaLink = apiUrl + apiSearch;
-    return finaLink
-}
-
-async function apiGet() {
-    let response = await fetch(urlBuilder());
-    let data = await response.json()
-    let countryData = data._links;
-    let countriesList = countryData['country:items']
-    //console.log(countriesList[2])
-    for (country in countriesList) {
-        console.log(countriesList[country]);
-    }
-}
-
-apiGet();
 
 var containerElemento = document.querySelector('.cards')
 var newCity = document.querySelector('#newCity')
