@@ -7,7 +7,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,31 +15,31 @@ body{
     background-color: #222327;
 }
 
-.container{
+.container {
     width: 90%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color:#121214;
+    background-color: #121214;
     padding: 40px;
     border-radius: 20px;
 }
 
-.mainTitle{
+.mainTitle {
     background: -webkit-linear-gradient(#614385, #516395);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-h2{
+h2 {
     margin-bottom: 20px;
     background: -webkit-linear-gradient(#614385, #516395);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,15 +47,15 @@ form{
 
 }
 
-form div{
+form div {
     margin-bottom: 20px;
 }
 
-label{
+label {
     color: #FFF;
 }
 
-form div input{
+form div input {
     width: 60vw;
     display: flex;
     flex-direction: column;
@@ -64,10 +64,10 @@ form div input{
     border-style: none;
     background-color: #222327;
     color: #FFF;
-    
+
 }
 
-.buttons{
+.buttons {
     width: 100%;
     margin-top: 40px;
     position: relative;
@@ -76,7 +76,7 @@ form div input{
     align-items: center;
 }
 
-button{
+button {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,6 +86,13 @@ button{
     border-radius: 50%;
     border-style: none;
     background: linear-gradient(to right, #614385, #516395);
+    color: #FFF;
+}
+
+.deleteCity {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to right, #f04507, #c60909);
     color: #FFF;
 }
 
@@ -113,7 +120,7 @@ button{
     flex-wrap: wrap;
     justify-content: center;
 }
-  
+
 .card {
     width: 30em;
     background-color: #222327;
@@ -121,13 +128,13 @@ button{
     margin-bottom: 1em;
     border-radius: 5px;
     border: 1px solid #121214;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
     transition: 0.3s;
-    margin: 1%;
+    margin: 10px;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(255,255,255,0.6);
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.6);
 }
 
 .card img {
@@ -145,7 +152,7 @@ button{
 }
 
 @media (max-width: 600px) {
-    .card { 
-        width: 100%; 
+    .card {
+        width: 100%;
     }
 }

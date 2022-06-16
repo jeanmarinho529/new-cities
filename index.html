@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="./style/style.css">
     <title>Checkpoint I | Grupo III</title>
 </head>
+
 <body>
     <div class="container">
 
@@ -16,109 +18,56 @@
         <form>
 
             <div class="form-control">
-    
                 <label for="photoCity">Photo</label>
                 <input type="text" placeholder="Paste here the URL (photo of the city)" id="photoCity" required>
                 <small>Please enter a valid URL</small>
-    
             </div>
-    
+
             <div class="form-control">
-    
                 <label for="nameCity">Name</label>
                 <input type="text" placeholder="Enter city name here" id="nameCity" required>
                 <small>Enter city name</small>
-    
             </div>
-    
+
             <div class="form-control">
-    
                 <label for="description">Description</label>
                 <input type="text" placeholder="Description" id="description" required>
                 <small>Type something about the city</small>
-    
             </div>
-    
+
             <div>
-    
                 <label for="trivia">Trivia</label>
                 <input type="text" placeholder="Trivia (optional)" id="trivia">
-    
             </div>
 
             <div class="buttons">
-                
                 <button type="reset">
                     <span>
                         <ion-icon name="arrow-undo-outline"></ion-icon>
                     </span>
                     <span>Clean</span>
                 </button>
-                
-                <button type="submit">
+
+                <button id="newCity">
                     <span>
                         <ion-icon name="checkmark-circle-outline"></ion-icon>
                     </span>
                     <span>Submit</span>
                 </button>
-
             </div>
-    
+
         </form>
 
         <div class="cards">
-            <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/S%C3%A3o_Paulo_city_%28Bela_Vista%29.jpg">
-                <h1>title card</h1>
-                <p>
-                  description card
-                </p>
-                <p class="triviaCard">
-                    exemple
-                </p>
-              </div>
-
-              <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/S%C3%A3o_Paulo_city_%28Bela_Vista%29.jpg">
-                <h1>title card</h1>
-                <p>
-                  description card
-                </p>
-                <p class="triviaCard">
-                    exemple
-                </p>
-              </div>
-              <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/S%C3%A3o_Paulo_city_%28Bela_Vista%29.jpg">
-                <h1>title card</h1>
-                <p>
-                  description card
-                </p>
-                <p class="triviaCard">
-                    exemple
-                </p>
-              </div>
-              <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/S%C3%A3o_Paulo_city_%28Bela_Vista%29.jpg">
-                <h1>title card</h1>
-                <p>
-                  description card
-                </p>
-                <p class="triviaCard">
-                    exemple
-                </p>
-              </div>
-
-
-
         </div>
-            
+
     </div>
 
-<!-- icons -->
+    <!-- icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
- <!-- ----- -->
-    <script src="/app.js"></script>
+    <!-- ----- -->
+    <script src="./app.js"></script>
 </body>
+
 </html>
