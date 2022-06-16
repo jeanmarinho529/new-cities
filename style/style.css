@@ -1,5 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
-    background-color: rgb(37, 37, 37);
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222327;
+}
+
+.container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color:#121214;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.mainTitle{
+    background: -webkit-linear-gradient(#614385, #516395);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2{
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(#614385, #516395);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form div{
+    margin-bottom: 20px;
+}
+
+label{
+    color: #FFF;
+}
+
+form div input{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #222327;
+    color: #FFF;
+    
+}
+
+.buttons{
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border-style: none;
+    background: linear-gradient(to right, #614385, #516395);
+    color: #FFF;
+}
+
+
+
+.form-control small {
+
+    color: rgb(218, 46, 46);
+    opacity: 0;
+
+}
+
+.form-control.error small {
+
+    opacity: 1;
+
+}
+
+.form-control.error input {
+
+    border: 1px solid rgb(218, 46, 46);
+
+}
+
+.cards {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    width: 80%;
+    margin: 2em 10%;
+  }
+  
+  .card {
+    width: 30em;
+    background-color: #222327;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid #121214;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(255,255,255,0.6);
+  }
+  
+  .card img {
+    width: 100%;
+  }
+  
+  .card h1 {
+    font-size: 1.3em;
+    margin-bottom: .4em;
+    color: #FFF;
+  }
+
+  .card p{
+    color: #FFF;
+  }
