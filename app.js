@@ -1,5 +1,6 @@
 const apiUrl = 'https://api.teleport.org/api/'
 const apiSearch = 'countries/'
+const imageDefault = 'https://www.madeireiraestrela.com.br/images/joomlart/demo/default.jpg'
 
 function urlBuilder() {
     const finaLink = apiUrl + apiSearch;
@@ -19,38 +20,75 @@ async function apiGet() {
 
 apiGet();
 
+var containerElemento = document.querySelector('.cards')
+var newCity = document.querySelector('#newCity')
 
-// Control Form
+var cities = JSON.parse(localStorage.getItem('cities')) || []
 
-const list = document.querySelectorAll('.list');
-
-function activeLink() {
-    list.forEach((item) => item.classList.remove('active'));
-    this.classList.add('active');
+for (let city of cities) {
+    newCityInHtml(city)
 }
 
+newCity.addEventListener('click', (evento) => {
 
-list.forEach((item) => item.addEventListener('click', activeLink))
+    evento.preventDefault()
 
+    nameCity = document.getElementById('nameCity').value
+    description = document.getElementById('description').value
+    if (!nameCity || !description){
+        return
+    }
 
-const formControlsElements = document.querySelectorAll('.form-control')
+    let city = {
+        id: getNewId(),
+        photo_path: document.getElementById('photoCity').value || imageDefault,
+        name: nameCity,
+        description: description,
+        trivia: document.getElementById('trivia').value
+    }
 
-for (let control of formControlsElements) {
+    cities.push(city)
+    localStorage.setItem('cities', JSON.stringify(cities))
 
-    const controlInputElement = control.children[1]
+    document.getElementById("myForm").reset();
+    newCityInHtml(city)
+})
 
-    controlInputElement.addEventListener('keyup', event => {
+function getNewId() {
+    let lastId = 0
+    let lastCity = cities[cities.length - 1]
 
-        if (event.target.checkValidity()) {
+    if (lastCity) {
+        lastId = lastCity['id']
+    }
 
-            control.classList.remove('error')
+    return lastId + 1
+}
 
-        } else {
+function clickDeleteCity(id) {
+    if (confirm('Really want to delete?')) {
+        removeCityLocalStorage(id)
+        document.getElementById(`card-${id}`).outerHTML = ""
+    }
+}
 
-            control.classList.add('error')
+function removeCityLocalStorage(id) {    
+    index = cities.findIndex((element) => element.id == id)
+    cities.splice(index, 1)
 
-        }
+    localStorage.setItem('cities', JSON.stringify(cities))
+}
 
-    })
-
+function newCityInHtml(city) {
+    containerElemento.innerHTML += `
+        <div class="card" id="card-${city.id}">
+            <img src="${city.photo_path}">
+            <h1>${city.name}</h1>
+            <p>${city.description}</p>
+            <p>${city.trivia}</p>
+            <button class="deleteCity" onClick="clickDeleteCity(this.value);" value="${city.id}">
+                <span><ion-icon name="checkmark-circle-outline"></ion-icon></span>
+            </button>
+        </div>
+    `
 }
