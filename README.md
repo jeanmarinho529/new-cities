@@ -1,6 +1,6 @@
 # Checkpoint1-FrontEnd2
 
-####Students (*)
+## Students
 
 * Jean Marinho
 * Lucas Suares
