@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -89,8 +89,6 @@ button{
     color: #FFF;
 }
 
-
-
 .form-control small {
 
     color: rgb(218, 46, 46);
@@ -111,17 +109,12 @@ button{
 }
 
 .cards {
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 30px;
-    width: 80%;
-    margin: 2em 10%;
-  }
+}
   
-  .card {
+.card {
     width: 30em;
     background-color: #222327;
     padding: 1.5em;
@@ -130,22 +123,29 @@ button{
     border: 1px solid #121214;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
     transition: 0.3s;
-  }
+    margin: 1%;
+}
 
-  .card:hover {
+.card:hover {
     box-shadow: 0 8px 16px 0 rgba(255,255,255,0.6);
-  }
-  
-  .card img {
+}
+
+.card img {
     width: 100%;
-  }
-  
-  .card h1 {
+}
+
+.card h1 {
     font-size: 1.3em;
     margin-bottom: .4em;
     color: #FFF;
-  }
+}
 
-  .card p{
+.card p {
     color: #FFF;
-  }
+}
+
+@media (max-width: 600px) {
+    .card { 
+        width: 100%; 
+    }
+}
