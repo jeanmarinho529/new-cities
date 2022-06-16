@@ -64,7 +64,6 @@ form div input {
     border-style: none;
     background-color: #222327;
     color: #FFF;
-
 }
 
 .buttons {
@@ -97,22 +96,16 @@ button {
 }
 
 .form-control small {
-
     color: rgb(218, 46, 46);
     opacity: 0;
-
 }
 
 .form-control.error small {
-
     opacity: 1;
-
 }
 
 .form-control.error input {
-
     border: 1px solid rgb(218, 46, 46);
-
 }
 
 .cards {
@@ -154,5 +147,13 @@ button {
 @media (max-width: 600px) {
     .card {
         width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    form div input {
+        width: 90vw;
     }
 }
