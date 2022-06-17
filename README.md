@@ -12,7 +12,7 @@ NOTE: The project uses the local storage to store the registered cities
 
 ### Clone the repository
 ```
-$ git clone https://github.com/VictorBianche/Checkpoint1-FrontEnd2.git && cd Checkpoint1-FrontEnd2
+$ git clone https://github.com/VictorBianche/Checkpoint1-FrontEnd2.git && cd new-cities
 ```
 
 ### Docker
