@@ -67,7 +67,7 @@ function newCityInHtml(city) {
             <p>${city.description}</p>
             <p>${city.trivia}</p>
             <button class="deleteCity" onClick="clickDeleteCity(this.value);" value="${city.id}">
-                <span><ion-icon name="checkmark-circle-outline"></ion-icon></span>
+                <span><ion-icon name="trash"></ion-icon></span>
             </button>
         </div>
     `
